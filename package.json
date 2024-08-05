@@ -1,0 +1,30 @@
+{
+  "name": "clear-basics",
+  "version": "1.0.0",
+  "description": "Basics of Frontend development",
+  "main": "index.js",
+  "type": "module",
+  "homepage": "http://ringale95.github.io/clear-basics",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "burnes-catalog": "file:/Users/ingale.r/burnes-catalog"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.2.7",
+    "@storybook/addon-interactions": "^8.2.7",
+    "@storybook/addon-links": "^8.2.7",
+    "@storybook/blocks": "^8.2.7",
+    "@storybook/html": "^8.2.7",
+    "@storybook/html-vite": "^8.2.7",
+    "@storybook/test": "^8.2.7",
+    "storybook": "^8.2.7"
+  }
+}

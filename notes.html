@@ -1,0 +1,279 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clear Basics</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 20px;
+                padding: 0;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+
+            h1 {
+                text-align: center;
+                color: #444;
+            }
+
+            h2 {
+                color: #555;
+                border-bottom: 2px solid #ddd;
+                padding-bottom: 5px;
+            }
+
+            h3 {
+                color: #666;
+            }
+
+            ul {
+                list-style-type: disc;
+                margin-left: 20px;
+            }
+
+            p,
+            pre,
+            code {
+                margin: 10px 0;
+            }
+
+            pre {
+                background: #f8f8f8;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                overflow-x: auto;
+            }
+
+            code {
+                background: #f4f4f4;
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            .code-block {
+                background: #f4f4f4;
+                padding: 10px;
+                border-left: 3px solid #ccc;
+                margin: 10px 0;
+            }
+
+            .code-block code {
+                display: block;
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Clear Basics</h1>
+        <p>Basics of Frontend development</p>
+
+        <h2>Extensions downloaded:</h2>
+        <ul>
+            <li>Prettier</li>
+            <li>Live-server</li>
+        </ul>
+
+        <h2>Fundamentals:</h2>
+        <ul>
+            <li>When you visit a website, your browser (client) sends an HTTP request to the server & receives an HTTP
+                response which includes an HTML document that represents the page you're visiting. The browser reads the
+                document & constructs a DOM (Document Object Model). Once the DOM is ready, the browser renders the
+                target
+                page.</li>
+            <li>To view HTTP requests we can use the <code>Network Tab</code>.</li>
+            <li><code>DOCTYPE</code> declaration specifies the version of HTML being used.</li>
+            <li>The root element in HTML is the <code>html</code> element.</li>
+            <li>Styles types: Embedded, external, and inline.</li>
+            <li>External stylesheets: <code>styles.css</code>. Link the stylesheet document: <code>&lt;link
+                    rel="stylesheet"
+                    href="styles.css"&gt;</code>.</li>
+            <li>Override the external stylesheet by defining the rules in the same HTML.</li>
+            <li>Inline styles.</li>
+        </ul>
+
+        <h2>Normalize CSS</h2>
+        <ul>
+            <li>Normalize.css will define CSS for the complete page.</li>
+            <li>Selectors: Type, id, class, attribute.</li>
+            <li>ID: <code>&lt;section id="products"&gt;&lt;/section&gt;</code>.</li>
+            <li><code>&lt;a href="http://www.google.com" target="_blank"&gt;Google&lt;/a&gt;</code>.
+                <ul>
+                    <li>To access all 'a' tags with target attribute: <code>a[target="_blank"] { color: orange;
+                            }</code>.
+                    </li>
+                    <li>To access all 'a' tags with href containing "google": <code>a[href*="google"] { color: orange;
+                            }</code> (Use this instead of typing the actual URL as it is very fragile).</li>
+                    <li>To check if URL starts with a given word: <code>a[href^="http"] { color: orange; }</code>.</li>
+                    <li>To check if URL ends with a given word: <code>a[href$="http"] { color: orange; }</code>.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Relational selectors</h2>
+        <p>Select using <code>p</code> which includes all 'p':</p>
+        <div class="code-block"><code>#products p { color: orange; }</code></div>
+
+        <p>Select only the first child of products:</p>
+        <div class="code-block"><code>#products > p { color: orange; }</code></div>
+
+        <p>Select the immediate sibling of products:</p>
+        <div class="code-block"><code>#products + p { color: orange; }</code></div>
+
+        <p>Select all siblings of products:</p>
+        <div class="code-block"><code>#products ~ p { color: orange; }</code></div>
+
+        <h2>Pseudo class selectors</h2>
+        <p>Types of pseudo selectors are: It starts with <code>:</code></p>
+        <ul>
+            <li><code>article :first-child {}</code></li>
+            <li><code>article p:first-child {}</code></li>
+            <li><code>article :first-of-type {}</code></li>
+            <li><code>article p:first-of-type {}</code></li>
+            <li><code>article p:last-child {}</code></li>
+            <li><code>article p:last-of-type {}</code></li>
+            <li><code>ul li:nth-child(odd) {}</code></li>
+            <li><code>a :visited, a :link {}</code></li>
+            <li><code>a :hover, a :focus {}</code></li>
+        </ul>
+
+        <h2>Pseudo elements selectors</h2>
+        <p>Starts with <code>::</code></p>
+        <ul>
+            <li><code>p ::first-letter {}</code></li>
+            <li><code>p ::first-line {}</code></li>
+            <li><code>p ::selection {}</code></li>
+            <li><code>p ::before {}</code></li>
+        </ul>
+
+        <h2>Selector Specificity</h2>
+        <p>Each selector has weight. Hierarchy is:</p>
+        <ul>
+            <li>ID selector</li>
+            <li>Class & attributes specific</li>
+            <li>Element selector</li>
+        </ul>
+
+        <h2>Basics:</h2>
+        <p>For CSS property: <code>box-sizing: border-box;</code> the size of content is only shown or calculated and
+            paddings and borders aren't included. Therefore, apply it universally. But it is not applied to pseudo
+            elements
+            so specifically mention it like:</p>
+        <div class="code-block"><code>*, *::before, *::after { box-sizing: border-box; }</code></div>
+
+        <p><code>overflow: hidden</code> -> will hide extra content and show scroll</p>
+        <p><code>overflow: auto</code> -> scrollbar only shows if more content</p>
+
+        <h3>Units:</h3>
+        <ul>
+            <li>Absolute units:
+                <ul>
+                    <li>px, pt, in, cm, mm</li>
+                </ul>
+            </li>
+            <li>Relative units:
+                <ul>
+                    <li><code>%</code> -> relative to the size of parent. By default, the block-level elements' height
+                        is 0
+                        and width = 100%. Height cannot be used.</li>
+                    <li><code>vw</code> -> size of the viewport. We can size as per height as well and width too = 100vh
+                        and
+                        width = 50vw</li>
+                    <li><code>vh</code> -> size of the viewport</li>
+                    <li><code>em, rem</code> -> font-size = em = width = 10em means 10 * 16px (font-size default) and
+                        rem is
+                        root level which is 16px but em is whatever is parent font-size. The benefit is properly
+                        resizable
+                        and adjusts as per font size of HTML defined in windows settings.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>VH height can cause some issues on mobile screens. So use media queries.</p>
+
+        <h2>Positioning:</h2>
+        <ul>
+            <li>By default, all boxes' positions of all elements are "Static" meaning they are not positioned. To
+                position
+                these elements change the position property to relative where we can position it relative to the
+                original
+                position.</li>
+            <li><code>position: relative</code> -> we can position it relative to its original position by <code>left:
+                    -4rem;</code> or <code>right: 4rem;</code>.</li>
+            <li><code>z-index</code> property is the depth. By default, it's 0 for all elements. If 1 means closer to us
+                and
+                -1 means away.</li>
+            <li>Absolute: Here we are removing the element from its original position & positioning it. Positioned
+                relative
+                to its nearest ancestor.</li>
+        </ul>
+
+        <h2>Responsive Web:</h2>
+        <ul>
+            <li>View port: We can use the viewport meta tag to define the viewport dimensions.</li>
+            <li>Media queries:
+                <ul>
+                    <li><code>min-width</code> -> applies this rule if the width of the device is >= 37.5em</li>
+                    <li><code>max-width</code> -> applies this rule if the width of the device is < 37.5em</li> </ul>
+                            </li> </ul> <h2>Flexbox:</h2>
+                            <ul>
+                                <li>New CSS layout mode. Will arrange elements inside the flex container relative to
+                                    each
+                                    other. Works with parent-child relationships only. Useful for 1D layout (rows and
+                                    columns) & the default is a row.</li>
+                                <li>Flex container: <code>display: flex;</code> to make an element a flex container.
+                                </li>
+                                <li>Flex item: Children of the flex container. When flex-direction is a row, the main
+                                    axis
+                                    is horizontal & the cross-axis is vertical. When flex-direction is a column, the
+                                    main
+                                    axis is vertical & the cross-axis is horizontal.</li>
+                            </ul>
+
+                            <ul>
+                                <li>Align items:
+                                    <ul>
+                                        <li><strong>justify-content:</strong> along main axis</li>
+                                        <li><strong>align-items:</strong> along cross axis</li>
+                                    </ul>
+                                </li>
+                                <li><strong>flex-wrap:</strong> wrap; Items that don't fit in one line will be wrapped
+                                    and pushed down maintaining the size</li>
+                                <li><strong>align-content:</strong> center; This align-content will adjust the complete
+                                    content of flexbox as per main axis</li>
+                            </ul>
+
+                            <p>// To move one of the items up, down, left, or right:</p>
+                            <ul>
+                                <li><strong>align-self:</strong> (usage)</li>
+                            </ul>
+
+                            <h2>Sizing items in flex:</h2>
+                            <p>Not to the container but to items:</p>
+                            <ul>
+                                <li><strong>flex-basis:</strong> (will override the normal width or height depending on
+                                    flex-direction: row or column)</li>
+                                <li><strong>flex-grow:</strong> (growth factor of flex items. Grow in the same factor)
+                                </li>
+                                <li><strong>flex-shrink:</strong> (how the elements should shrink)</li>
+                                <li><strong>flex:</strong> (grow, shrink, basis)</li>
+                            </ul>
+                            <h2>Grids:</h2>
+                            <p>Define a grid using container:</p>
+                            <ul>
+                                <li><strong>display:</strong> grid</li>
+                                <li><strong>grid-template-rows:</strong> (define the number of rows)</li>
+                                <li><strong>grid-template-columns:</strong> (define the number of columns)</li>
+                                <li><strong>justify-items:</strong> along horizontal axis</li>
+                                <li><strong>align-items:</strong> along vertical axis</li>
+                            </ul>
+
+
+
+    </body>
+
+    </html>

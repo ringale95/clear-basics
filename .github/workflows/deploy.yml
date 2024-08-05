@@ -31,13 +31,13 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
+        run: npm run build-storybook
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload build output
-          path: "dist"
+          path: "storybook-static"
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -1,0 +1,78 @@
+/* Flexbox in row direction */
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.box1f {
+    background-color: aqua;
+}
+
+.box2f {
+    background-color: bisque;
+}
+
+.box3f {
+    background-color: pink;
+
+}
+
+.box4f {
+    width: 200px;
+    height: 20px;
+    padding-left: 150px;
+    border-radius: 100px;
+    background-color: rgb(145, 145, 245);
+}
+
+.box5f {
+    width: 13px;
+    height: 50px;
+    border-radius: 10px;
+    padding-top: 5%;
+    background-color: rgb(145, 145, 245);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+
+}
+
+.box:last-child {
+    margin-right: 10px;
+}
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.box1-f {
+    background-color: aqua;
+}
+
+.box2-f {
+    background-color: bisque;
+}
+
+.box3-f {
+    background-color: pink;
+
+}
+
+.box4-f {
+    width: 20px;
+    height: 200px;
+    border-radius: 100px;
+    padding-top: 10%;
+    background-color: rgb(145, 145, 245);
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}

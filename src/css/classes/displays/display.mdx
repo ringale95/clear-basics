@@ -1,0 +1,119 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Classes/Displays/Docs" />
+
+# Displays
+
+## Definition
+ 
+  <b> Display property sets inner and outer display types. `Outer display type` sets an element is treated as `block or inline box` in flow layout  and `Inner display type` sets layout used for the children is
+ `flow` , `grid`, `flex` </b>
+ 
+## Usage
+            <pre>
+                display: flex; 
+                display: inline-flex;
+                display: block;
+                display: inline;
+                display: inline-block;
+                display: grid;
+            </pre>
+
+## Grouped values
+
+- Outside
+
+    <b> Sets elements outer display property type in flow layout. </b>
+
+    <ul>
+        <li> block </li>
+            <ul>
+                <li> Generates a block box, generating line breaks both before and after the element when in the normal flow. </li>
+            </ul>
+
+              <h3> Example for block </h3>
+            <div class="container-block">
+            <div class="box-1"> </div>
+            <div class="box-2"> </div>
+            <div class="box-3"> </div>
+
+        </div>
+
+        <li> inline </li>
+            <ul>
+                 <li> No line breaks </li>
+            </ul>
+        <h3> Example for inline </h3>
+            <span class="container-inline">
+            <span class="boxa">A </span>
+            <span class="boxb">B1</span>
+            <span class="boxc">C </span>
+
+        </span>
+    </ul>
+
+- Inside
+
+    <b> Sets elements inner display property type of its contents or children. </b>
+
+    <ul>
+        <li> flow </li>
+            <ul>
+                <li>The element lays out its contents using flow layout (block-and-inline layout)</li>
+            </ul>
+   
+        <li> flex </li>
+            <ul>
+                 <li>Element behaves as ` block level element` and its content are laid out in `flexbox model` </li>
+            </ul>
+
+            <li> grid </li>
+            <ul>
+                 <li>Element behaves as ` block level element` and its content are laid out in `grid model` </li>
+            </ul>
+    </ul>
+
+
+- Precomposed
+
+   <b> Sets precomposed property including inline, block, flex for an Element </b>
+
+    <ul>
+    <li> inline-block </li>
+        <ul>
+            <li>Element behaves as inline level and its children is laid out in block fashion</li>
+        </ul>
+          <h3> Example for inline-block </h3>
+            <div class="container-block">
+            <div class="box1"> </div>
+            <div class="box2"> </div>
+            <div class="box3"> </div>
+
+        </div>
+
+      <li> inline-flex </li>
+        <ul>
+            <li>The element behaves like an inline-level element and lays out its content according to the flexbox model.</li>
+        </ul>  
+            <h3> Example for inline-flex : col</h3>
+            <div class="container-flexcol">
+            <div class="box1a"> </div>
+            <div class="box1b"> </div>
+            <div class="box1c"> </div>
+
+        </div>     
+
+             <h3> Example for inline-flex : row</h3>
+            <div class="container-flexrow">
+            <div class="box1ra"> </div>
+            <div class="box1rb"> </div>
+            <div class="box1rc"> </div>
+        </div>  
+
+    </ul>
+
+    
+
+
+
+    

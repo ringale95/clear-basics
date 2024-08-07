@@ -1,0 +1,114 @@
+/* Inline elements for span */
+.boxa,
+.boxb,
+.boxc {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+.boxb {
+
+    background-color: rgb(70, 33, 39);
+}
+
+.boxc {
+
+    background-color: rgb(186, 28, 54);
+}
+
+/* For inline block */
+.box1,
+.box2,
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    display: inline-block;
+}
+
+.box2 {
+
+    background-color: rgb(70, 33, 39);
+}
+
+.box3 {
+
+    background-color: rgb(186, 28, 54);
+}
+
+/* For blocks */
+
+.box-1,
+.box-2,
+.box-3 {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    display: block;
+}
+
+.box-2 {
+
+    background-color: rgb(70, 33, 39);
+}
+
+.box-3 {
+
+    background-color: rgb(186, 28, 54);
+}
+
+/* Inline flex column direction */
+.container-flexcol {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+
+.box1a,
+.box1b,
+.box1c {
+    width: 100px;
+    height: 100px;
+}
+
+.box1a {
+
+    background-color: pink;
+}
+
+.box1b {
+    background-color: rgb(70, 33, 39);
+}
+
+.box1c {
+    background-color: rgb(186, 28, 54);
+}
+
+
+/* Inline flex row direction */
+.container-flexrow {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+
+.box1ra,
+.box1rb,
+.box1rc {
+    width: 100px;
+    height: 100px;
+}
+
+.box1ra {
+
+    background-color: pink;
+}
+
+.box1rb {
+    background-color: rgb(70, 33, 39);
+}
+
+.box1rc {
+    background-color: rgb(186, 28, 54);
+}

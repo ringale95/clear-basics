@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/blocks";
+import { Source } from '@storybook/blocks';
 
 <Meta title="Classes/Flexbox/Docs" />
 
@@ -38,4 +39,65 @@ The flexible box layout module (usually referred to as flexbox) is a ```one-dime
     <span class="box4-f"> Main Axis </span>
            
 </div>
+
+## Default property values
+
+- flex direction : row
+- flex-grow : 0
+- flex-shrink : 1
+- align-items: stretch
+- flex-basis: auto
+- flex-wrap: nowrap
+
+## Properties
+
+- <b>Flex grow</b>
+    - Flex-grow CSS property sets flex grow factor, which specifies how much of flex container's free space if any should 
+    be assigned to flex item's main size
+
+    <br/>
+    <h3> Example of flex-grow/shrink</h3>
+        <b> yellow grow - 1: violet shrink - 1: cyan grow - 1 </b>
+
+    <div class="container-grow">
+        <div class="boxflex-item1 boxflex"> </div>
+        <div class="boxflex-item2 boxflex"> </div>
+        <div class="boxflex-item3 boxflex"> </div>
+    </div>
+    <br/>
+
+- <b>Flex wrap</b>
+     - The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
+
+        - Values
+
+            - nowrap
+                - The flex items are laid out in a single line which may cause the flex container to overflow.
+            - wrap
+                - The flex items break into multiple lines
+            - wrap-reverse
+                - Behaves the same as wrap, but cross-start and cross-end are inverted.
+
+## Examples
+
+We have created utility classes `.d-flex`, `flex-dir-col`, etc, that modifies the display attribute of the host element.
+
+**Flex Column Container**
+<div class="d-inline-flex flex-dir-col">
+    <div class="bg-primary">Item 1</div>
+    <div class="bg-secondary">Item 2</div>
+    <div class="bg-tertiary">Item 3</div>
+</div>
+
+**Source Code**
+<Source code={`
+<div class="d-inline-flex flex-dir-col">
+    <div class="bg-primary">Item 1</div>
+    <div class="bg-secondary">Item 2</div>
+    <div class="bg-tertiary">Item 3</div>
+</div>
+`} />
+
+
+
 

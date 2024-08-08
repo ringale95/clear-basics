@@ -1,0 +1,83 @@
+import { Meta } from "@storybook/blocks";
+import { Source } from '@storybook/blocks';
+
+
+<Meta title="Classes/Grid/Docs" />
+
+# Definition
+
+```CSS Grid Layout``` is a two-dimensional layout system for the web. It lets you organize content into rows
+and columns and offers many features to simplify creation of complex layout.
+
+# Grid layout
+A grid will typically have columns, rows, and then gaps between each row and column. The gaps are commonly referred to as ```gutters```.
+
+## Usage
+
+<b>Below transforms all the children of the container into grid items. Below gives you one column grid </b>
+
+ <Source code={`
+   display: grid
+`} />
+
+
+<b>To display more grid-like add some columns to grid</b>
+ <Source code={`
+ display: grid
+    grid-template-columns: 200px 200px 200px
+`} />
+<br/>
+<h3> Grid layout view </h3>
+   <div class="grid-container">
+        <div class="boxgrid-item1">One</div>
+        <div class="boxgrid-item2">Two</div>
+        <div class="boxgrid-item3">Three</div>
+    </div>
+
+Can use fr units. The fr unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
+
+  <Source code={`
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+`} />
+   <h3> Grid layout view with fr units</h3>
+   grid-template-columns: 1fr 1fr 1fr;
+  <div class="grid-container1">
+        <div class="boxgrid-item1a">One</div>
+        <div class="boxgrid-item2b">Two</div>
+        <div class="boxgrid-item3c">Three</div>
+    </div>
+   grid-template-columns: 2fr 1fr 1fr;
+     <div class="grid-container2">
+        <div class="boxgrid-item1-a">One</div>
+        <div class="boxgrid-item2-b">Two</div>
+        <div class="boxgrid-item3-c">Three</div>
+    </div>
+
+## Grid gaps
+   - column-gap
+   - row-gap
+   - gap
+
+   <Source code={`
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      gap: 20px
+`} />
+
+ <br/>
+   gap : 20px - Leaves a gap in column and row
+   <div class="grid-container2">
+        <div class="boxgrid-item1-a">One</div>
+        <div class="boxgrid-item2-b">Two</div>
+        <div class="boxgrid-item3-c">Three</div>
+        <div class="boxgrid-item4-d">Four</div>
+        <div class="boxgrid-item5-e">Five</div>
+        <div class="boxgrid-item6-f">Six</div>
+    </div>
+
+## Types of grids:
+
+   - Implicit grid
+   - Explicit grid 
+      - Explicit grid is created using grid-template-columns or grid-template-rows.

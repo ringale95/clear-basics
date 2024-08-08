@@ -1,4 +1,6 @@
-@import 'box/index.css';
+@import 'colors/index.css';
+@import 'spacing/index.css';
+@import 'grid/index.css';
 @import 'box-sizing/index.css';
 @import 'displays/index.css';
 @import 'flexbox/index.css';

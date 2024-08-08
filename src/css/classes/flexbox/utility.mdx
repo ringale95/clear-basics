@@ -1,0 +1,52 @@
+import { Meta } from "@storybook/blocks";
+import { Source } from '@storybook/blocks';
+
+<Meta title="Classes/Flexbox/Utility Docs" />
+
+# Utility Classes
+
+We have created utility classes `.d-flex`, `flex-dir-col`, etc, that modifies the display attribute of the host element.
+
+## .d-inline-flex
+
+This utiltiy classes enables users to specify the display property as `inline-flex` via the `.d-inline-flex` class.
+
+### Example 
+<div class="d-inline-flex flex-dir-col">
+    <div class="bg-primary">Item 1</div>
+    <div class="bg-secondary">Item 2</div>
+    <div class="bg-tertiary">Item 3</div>
+</div>
+
+### Source Code
+<Source code={`
+<div class="d-inline-flex flex-dir-col">
+    <div class="bg-primary">Item 1</div>
+    <div class="bg-secondary">Item 2</div>
+    <div class="bg-tertiary">Item 3</div>
+</div>
+`} />
+
+
+## .d-flex
+
+This utiltiy classes enables users to specify the display property as `flex` via the `.d-flex` class.
+
+### Example 
+<div class="d-flex flex-dir-col align-item-center">
+    <div class="bg-primary">Item 1</div>
+    <div class="bg-secondary">Item 2</div>
+    <div class="bg-tertiary">Item 3</div>
+</div>
+
+### Source Code
+<Source code={`
+<div class="d-flex flex-dir-col align-items-center">
+    <div class="bg-primary">Item 1</div>
+    <div class="bg-secondary">Item 2</div>
+    <div class="bg-tertiary">Item 3</div>
+</div>
+`} />
+
+
+

@@ -2,7 +2,22 @@ import { Meta } from "@storybook/blocks";
 
 <Meta title="Classes/Box Sizing/Docs" />
 
+
+# Box-sizing
+
+## Definition
+ 
+The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+
+Without CSS box-sizing property:
+- ```width + padding + border = actual width``` of an element
+- ```height + padding + border = actual height``` of an element
+
+This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).
+
+Box size: border-box (actual width and height)
 <div className="box-sized"></div>
 <br/>
 
+Box size: content-box(added width and height)
 <div className="content-sized"></div>

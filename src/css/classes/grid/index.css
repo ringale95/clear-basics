@@ -1,0 +1,54 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.boxgrid-item1 {
+    background-color: pink;
+}
+
+.boxgrid-item2 {
+    background-color: gold;
+}
+
+.boxgrid-item3 {
+    background-color: chartreuse;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.boxgrid-item1a {
+    background-color: rgb(243, 199, 206);
+}
+
+.boxgrid-item2b {
+    background-color: rgb(233, 221, 153);
+}
+
+.boxgrid-item3c {
+    background-color: rgb(208, 244, 172);
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.boxgrid-item1-a,
+.boxgrid-item6-f {
+    background-color: rgb(243, 199, 206);
+}
+
+.boxgrid-item2-b,
+.boxgrid-item4-d {
+    background-color: rgb(233, 221, 153);
+}
+
+.boxgrid-item3-c,
+.boxgrid-item5-e {
+    background-color: rgb(208, 244, 172);
+}
